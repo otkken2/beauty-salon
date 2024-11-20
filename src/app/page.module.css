@@ -1,0 +1,37 @@
+.scroll_line {
+  background: #fff;
+  bottom: 0;
+  display: block;
+  height: 46px;
+  /* left: 50%; */
+  /* position: absolute; */
+  /* transform: translateX(-50%); */
+  width: 1px;
+}
+
+.is_animation_scrollLine {
+  -webkit-animation: scrollLine 2.5s infinite;
+  animation: scrollLine 2.5s infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: translateX(-50%) scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform: translateX(-50%) scaleY(1);
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: bottom;
+  }
+}
